@@ -1,0 +1,16 @@
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.Form1.resources
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.Properties.Resources.resources
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\bin\Debug\RawOutputConverter.exe
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\bin\Debug\RawOutputConverter.pdb
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.exe
+\\vmware-host\Shared Folders\Desktop\TCE1209\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.pdb
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.exe
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.pdb
+C:\Dev\RawOutputConverter\RawOutputConverter\bin\Debug\RawOutputConverter.exe
+C:\Dev\RawOutputConverter\RawOutputConverter\bin\Debug\RawOutputConverter.pdb
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.Form1.resources
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.Properties.Resources.resources
+C:\Dev\RawOutputConverter\RawOutputConverter\obj\Debug\RawOutputConverter.csproj.GenerateResource.Cache
