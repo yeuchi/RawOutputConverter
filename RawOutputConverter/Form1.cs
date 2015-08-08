@@ -65,9 +65,9 @@ namespace RawOutputConverter
                 numFiles.Text = "Files count: " + filesInfo.Count();
 
                 listFileInfo = new FileSystemInfo[filesInfo.Count()];
-                for (int i = 0; i < filesInfo.Count(); i++)
+                for (int i = 0; i < list.Count(); i++)
                 {
-                    listFileInfo[i] = filesInfo[i];
+                    listFileInfo[i] = list.ElementAt(i);
                     listFiles.Text += i +") " + listFileInfo[i].Name + "\r\n";
                 }
                 this.Cursor = Cursors.Default;
@@ -100,12 +100,18 @@ namespace RawOutputConverter
                 for (int i = 0; i < listFileInfo.Count(); i++)
                 {
                     string[] lineOfPixels = imageHandler.loadAscii(listFileInfo[i].FullName);
-                    if (null != lineOfPixels)
+                    if (null == lineOfPixels)
                     {
                         DisplayError(imageHandler.error);
                         return;
                     }
                     histogram.append(lineOfPixels);
+                }
+                bool success = histogram.statistics();
+                if (false == success)
+                {
+                    DisplayError(histogram.error);
+                    return;
                 }
 
                 // publish min, max, mode, number of shades
@@ -120,7 +126,7 @@ namespace RawOutputConverter
                 // write histogram to file
                 if (null!=txtSaveHist.Text && txtSaveHist.Text.Length > 0)
                 {
-                    bool success = histogram.save(txtSaveHist.Text);
+                     success = histogram.save(txtSaveHist.Text);
                     if (false == success)
                         DisplayError(histogram.error);
                 }
