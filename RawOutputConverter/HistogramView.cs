@@ -36,8 +36,8 @@ namespace RawOutputConverter
 
         private double getYScale()
         {
-            // this needs work
-            return (double)histogram.max / picHist.Height;
+            return (histogram.modeValue>0)?
+                picHist.Height / (double)histogram.modeValue * xScale:1;
         }
 
         /*
@@ -51,7 +51,6 @@ namespace RawOutputConverter
 
                 // pens
                 Pen p = new Pen(Color.Gray, 1);
-                Pen mp = new Pen(Color.Blue, 1);       // mode - blue
 
                 // scaling
                 double yScale = getYScale();
@@ -67,9 +66,13 @@ namespace RawOutputConverter
                         sum += histogram.records[j];
 
                     int h = (int)(sum * yScale);
-                    g.DrawLine(p, i, 0, i, h);
-                }
+                    if (h > picHist.Height)
+                        h = picHist.Height;
 
+                    if(h>0)
+                        g.DrawLine(p, i, picHist.Height, i, picHist.Height-h);
+                }
+                picHist.Image = (Image)bmp;
                 return true;
             }
             catch (Exception ex)
