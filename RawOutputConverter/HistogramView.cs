@@ -30,7 +30,7 @@ namespace RawOutputConverter
             g = Graphics.FromImage(bmp);
             rect = new Rectangle(0, 0, picHist.Width, picHist.Height);
             xScale = (double)Histogram.MAX_PIXEL_DEPTH / (double)picHist.Width;
-            lineScale = (double)Histogram.MAX_PIXEL_DEPTH / (double)picHist.Width;
+            lineScale = (double)picHist.Width/(double)Histogram.MAX_PIXEL_DEPTH;
         }
 
 
@@ -40,10 +40,31 @@ namespace RawOutputConverter
                 picHist.Height / (double)histogram.modeValue * xScale:1;
         }
 
+        public bool draw(int min, int max)
+        {
+            try
+            {
+                bool success = drawData();
+                if (false == success)
+                    return false;
+
+                drawMin(min);
+                drawMax(max);
+                drawMode();
+                picHist.Image = (Image)bmp;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = "HistogramView draw() failed: " + ex.Message;
+                return false;
+            }
+        }
+
         /*
          * Draw histogram content
          */
-        public bool drawData()
+        protected bool drawData()
         {
             try
             {
@@ -72,7 +93,6 @@ namespace RawOutputConverter
                     if(h>0)
                         g.DrawLine(p, i, picHist.Height, i, picHist.Height-h);
                 }
-                picHist.Image = (Image)bmp;
                 return true;
             }
             catch (Exception ex)
@@ -82,11 +102,11 @@ namespace RawOutputConverter
             return false;
         }
 
-        public bool drawMin(decimal value)
+        protected bool drawMin(decimal value)
         {
             try
             {
-                if (null == g || histogram.min <=0)
+                if (histogram.min <=0)
                     throw new Exception("Histogram has not been rendered");
 
                 Pen p = new Pen(Color.Black, 1);       // min - black
@@ -102,11 +122,11 @@ namespace RawOutputConverter
             return false;
         }
 
-        public bool drawMax(decimal value)
+        protected bool drawMax(decimal value)
         {
             try
             {
-                if (null == g || histogram.max <= 0)
+                if (histogram.max <= 0)
                     throw new Exception("Histogram has not been rendered");
 
                 Pen p = new Pen(Color.Black, 1);       // max - black
@@ -122,15 +142,15 @@ namespace RawOutputConverter
             return false;
         }
 
-        public bool drawMode()
+        protected bool drawMode()
         {
             try
             {
-                if (null == g || histogram.modeIndex <= 0)
+                if (histogram.modeIndex <= 0)
                     throw new Exception("Histogram has not been rendered");
 
                 Pen p = new Pen(Color.Blue, 1);       // max - black
-                int i = (int)((double)histogram.modeIndex * xScale);
+                int i = (int)((double)histogram.modeIndex * lineScale);
                 g.DrawLine(p, i, 0, i, picHist.Height);
 
                 return true;

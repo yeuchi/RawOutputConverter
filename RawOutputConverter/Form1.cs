@@ -163,7 +163,7 @@ namespace RawOutputConverter
         private void numMin_ValueChanged(object sender, EventArgs e)
         {
             //re-draw line
-            histView.drawMin(numMin.Value);
+            histView.draw((int)numMin.Value, (int)numMax.Value);
         }
 
         /*
@@ -173,7 +173,7 @@ namespace RawOutputConverter
         private void numMax_ValueChanged(object sender, EventArgs e)
         {
             // re-draw line
-            histView.drawMax(numMin.Value);
+            histView.draw((int)numMin.Value, (int)numMax.Value);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -311,19 +311,8 @@ namespace RawOutputConverter
                 DisplayError("Invalid histogram max value");
                 return;
             }
-            bool success = histView.drawData();
-            if (false == success)
-                DisplayError(histView.error);
 
-             success = histView.drawMin(numMin.Value);
-            if (false == success)
-                DisplayError(histView.error);
-
-             success = histView.drawMax(numMax.Value);
-            if (false == success)
-                DisplayError(histView.error);
-
-             success = histView.drawMode();
+            bool success = histView.draw((int)numMin.Value, (int)numMax.Value);
             if (false == success)
                 DisplayError(histView.error);
         }
