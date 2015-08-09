@@ -64,6 +64,9 @@ namespace RawOutputConverter
         {
             try
             {
+                if (null != bmp)
+                    bmp.Dispose();
+
                 // create a bmp instance -- consider 8bpp only 
                 bmp = new Bitmap(width, LINE_WIDTH);
                 return true;

@@ -253,7 +253,7 @@ namespace RawOutputConverter
                     }
 
                     int imageWidth = listFileInfo.Count();
-                     success = imageHandler.allocBitmap(imageWidth);
+                    success = imageHandler.allocBitmap(imageWidth);
                     if (false == success)
                     {
                         DisplayError(histogram.error);
@@ -264,7 +264,7 @@ namespace RawOutputConverter
                     {
                         // load ascii strings
                         string[] lineOfPixels = imageHandler.loadAscii(listFileInfo[x].FullName);
-                        if (null != lineOfPixels)
+                        if (null == lineOfPixels)
                         {
                             DisplayError(imageHandler.error);
                             return;
@@ -295,7 +295,6 @@ namespace RawOutputConverter
                     if (true == chkGIF.Checked)
                         imageHandler.bmp.Save(txtSave.Text + ".gif", ImageFormat.Gif);
 
-                    imageHandler.clear();
                     this.Cursor = Cursors.Default;
                 }
             }
