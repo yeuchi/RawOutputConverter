@@ -40,12 +40,16 @@
             this.chkBMP = new System.Windows.Forms.CheckBox();
             this.txtSave = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnConvert = new System.Windows.Forms.Button();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnScan = new System.Windows.Forms.Button();
             this.numFiles = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtModeIndex = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtSaveHist = new System.Windows.Forms.TextBox();
+            this.btnSaveHist = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.txtNumShades = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,22 +62,17 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnSaveHist = new System.Windows.Forms.Button();
-            this.txtSaveHist = new System.Windows.Forms.TextBox();
-            this.txtModeIndex = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHist)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -197,15 +196,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnConvert
-            // 
-            this.btnConvert.Location = new System.Drawing.Point(376, 161);
-            this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(75, 23);
-            this.btnConvert.TabIndex = 0;
-            this.btnConvert.Text = "Convert";
-            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
-            // 
             // tab
             // 
             this.tab.Controls.Add(this.tabPage1);
@@ -269,6 +259,51 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtModeIndex
+            // 
+            this.txtModeIndex.Enabled = false;
+            this.txtModeIndex.Location = new System.Drawing.Point(428, 147);
+            this.txtModeIndex.Name = "txtModeIndex";
+            this.txtModeIndex.Size = new System.Drawing.Size(89, 20);
+            this.txtModeIndex.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(425, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Mode Index";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtSaveHist);
+            this.groupBox4.Controls.Add(this.btnSaveHist);
+            this.groupBox4.Location = new System.Drawing.Point(8, 7);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(411, 54);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Destination (.txt)";
+            // 
+            // txtSaveHist
+            // 
+            this.txtSaveHist.Location = new System.Drawing.Point(88, 22);
+            this.txtSaveHist.Name = "txtSaveHist";
+            this.txtSaveHist.Size = new System.Drawing.Size(317, 20);
+            this.txtSaveHist.TabIndex = 1;
+            // 
+            // btnSaveHist
+            // 
+            this.btnSaveHist.Location = new System.Drawing.Point(7, 20);
+            this.btnSaveHist.Name = "btnSaveHist";
+            this.btnSaveHist.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveHist.TabIndex = 0;
+            this.btnSaveHist.Text = "Save";
+            this.btnSaveHist.UseVisualStyleBackColor = true;
+            this.btnSaveHist.Click += new System.EventHandler(this.btnSaveHist_Click);
             // 
             // btnLoad
             // 
@@ -366,60 +401,14 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.btnConvert);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(538, 221);
+            this.tabPage3.Size = new System.Drawing.Size(538, 272);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.txtSaveHist);
-            this.groupBox4.Controls.Add(this.btnSaveHist);
-            this.groupBox4.Location = new System.Drawing.Point(8, 7);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(411, 54);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Destination (.txt)";
-            // 
-            // btnSaveHist
-            // 
-            this.btnSaveHist.Location = new System.Drawing.Point(7, 20);
-            this.btnSaveHist.Name = "btnSaveHist";
-            this.btnSaveHist.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveHist.TabIndex = 0;
-            this.btnSaveHist.Text = "Save";
-            this.btnSaveHist.UseVisualStyleBackColor = true;
-            this.btnSaveHist.Click += new System.EventHandler(this.btnSaveHist_Click);
-            // 
-            // txtSaveHist
-            // 
-            this.txtSaveHist.Location = new System.Drawing.Point(88, 22);
-            this.txtSaveHist.Name = "txtSaveHist";
-            this.txtSaveHist.Size = new System.Drawing.Size(317, 20);
-            this.txtSaveHist.TabIndex = 1;
-            // 
-            // txtModeIndex
-            // 
-            this.txtModeIndex.Enabled = false;
-            this.txtModeIndex.Location = new System.Drawing.Point(428, 147);
-            this.txtModeIndex.Name = "txtModeIndex";
-            this.txtModeIndex.Size = new System.Drawing.Size(89, 20);
-            this.txtModeIndex.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(425, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Mode Index";
             // 
             // Form1
             // 
@@ -438,13 +427,13 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picHist)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -463,7 +452,6 @@
         private System.Windows.Forms.CheckBox chkPNG;
         private System.Windows.Forms.CheckBox chkGIF;
         private System.Windows.Forms.TextBox listFiles;
-        private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

@@ -37,7 +37,7 @@ namespace RawOutputConverter
         private double getYScale()
         {
             return (histogram.modeValue>0)?
-                picHist.Height / (double)histogram.modeValue * xScale:1;
+                picHist.Height / (double)histogram.modeValue:1;
         }
 
         public bool draw(int min, int max)
@@ -86,7 +86,8 @@ namespace RawOutputConverter
                     for (int j = xStart; j < xEnd; j++)
                         sum += histogram.records[j];
 
-                    int h = (int)(sum * yScale);
+                    
+                    int h = (int)(sum/xScale * yScale);
                     if (h > picHist.Height)
                         h = picHist.Height;
 
@@ -109,7 +110,7 @@ namespace RawOutputConverter
                 if (histogram.min <=0)
                     throw new Exception("Histogram has not been rendered");
 
-                Pen p = new Pen(Color.Black, 1);       // min - black
+                Pen p = new Pen(Color.Green, 1);       // min - black
                 int i = (int)((double)value * lineScale);
                 g.DrawLine(p, i, 0, i, picHist.Height);
 
@@ -129,7 +130,7 @@ namespace RawOutputConverter
                 if (histogram.max <= 0)
                     throw new Exception("Histogram has not been rendered");
 
-                Pen p = new Pen(Color.Black, 1);       // max - black
+                Pen p = new Pen(Color.Green, 1);       // max - black
                 int i = (int)((double)value * lineScale);
                 g.DrawLine(p, i, 0, i, picHist.Height);
 

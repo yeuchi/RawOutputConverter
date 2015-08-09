@@ -1,4 +1,10 @@
-﻿using System;
+﻿// ==================================================================
+// Module:      Form1
+//
+// Description: Main - code implementation of design.
+//              ** next version should use worker thread for better experience.
+// ==================================================================
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -228,6 +234,7 @@ namespace RawOutputConverter
                             false == chkTIF.Checked)
                             chkBMP.Checked = true;
                     }
+                    save();
                 }
             }
             catch (Exception ex)
@@ -236,7 +243,7 @@ namespace RawOutputConverter
             }
         }
 
-        private void btnConvert_Click(object sender, EventArgs e)
+        private void save()
         {
             try
             {
@@ -323,6 +330,11 @@ namespace RawOutputConverter
             this.Cursor = Cursors.Default;
             MessageBox.Show(sError,
                 "Caption", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
