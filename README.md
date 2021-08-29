@@ -21,5 +21,5 @@ Folder view of captured photos. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255104-74f2822e-6be3-4bd2-a660-05d2212a8708.png">
 
 Example photo of my family. \
-<img height="100" src="https://user-images.githubusercontent.com/1282659/131255107-3fb3a81c-d811-4d0d-8c7f-48882753ca10.png">
+<img height="400" src="https://user-images.githubusercontent.com/1282659/131255107-3fb3a81c-d811-4d0d-8c7f-48882753ca10.png">
 
