@@ -3,8 +3,8 @@ This application was written for Professor Andrew Davidhazy's High-Speed 2048-Pi
 Languages: C# Unmanaged C++ interOp
 
 Photos taken at Lake Bde Maka Ska \
-<img height="100" src="https://user-images.githubusercontent.com/1282659/131254678-5074a060-ce41-4f67-8972-d2cfcaa079e3.jpg">
-<img height="100" src="https://user-images.githubusercontent.com/1282659/131254682-988c510d-d4a6-4a7d-8519-19f69385bc52.jpg">
+<img height="75" src="https://user-images.githubusercontent.com/1282659/131254678-5074a060-ce41-4f67-8972-d2cfcaa079e3.jpg">
+<img height="75" src="https://user-images.githubusercontent.com/1282659/131254682-988c510d-d4a6-4a7d-8519-19f69385bc52.jpg">
 
 Configuration of Camera, destination, exposure and histogram equalization. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255060-da802c7e-47ac-4742-b4c9-c2889d960a8b.png">
