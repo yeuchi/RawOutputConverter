@@ -7,7 +7,7 @@ Photos taken at Lake Bde Maka Ska \
 Configuration of Camera, destination, exposure and histogram equalization. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255060-da802c7e-47ac-4742-b4c9-c2889d960a8b.png">
 
-Frames collected during a scan. \
+images (lines) collected during a scan. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255063-2e48a34e-f4a9-4cb2-b1ad-ccac9a81014a.png">
 
 Start / Stop photo capture. \
