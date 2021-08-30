@@ -10,5 +10,5 @@ Features: Converts raw file data to bitmap with some image process (histogram eq
 1. Ascii2Bmp - 1st MighTex util application written for Professor Andy Davidhazy. \
 https://github.com/yeuchi/ascii2Bmp
 
-2. CSharpApplication - controls camera
+2. CSharpApplication - controls camera \
 https://github.com/yeuchi/CSharp_Application/blob/master/README.md
