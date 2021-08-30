@@ -1,6 +1,7 @@
 # RawOutputConverter
 This application was written for Professor Andrew Davidhazy's High-Speed 2048-Pixel USB2.0 CCD Line Camera with External Trigger (Mightex TCN/TCE-1209-U).\
-Languages: C# Unmanaged C++ interOp
+Languages: C# Unmanaged C++ interOp \
+IDE: Visual Studio 2008
 
 Photos taken at Lake Bde Maka Ska \
 <img height="80" src="https://user-images.githubusercontent.com/1282659/131254678-5074a060-ce41-4f67-8972-d2cfcaa079e3.jpg">
