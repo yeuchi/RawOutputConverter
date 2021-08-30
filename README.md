@@ -19,16 +19,16 @@ Configuration of Camera, destination, exposure and histogram equalization. \
 images (lines) collected during a scan. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255063-2e48a34e-f4a9-4cb2-b1ad-ccac9a81014a.png">
 
-Start / Stop photo capture. \
+Start / Stop photo-lines capture. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255069-351e8d5f-2c34-4c9e-aef4-5649875948c2.png">
 
-Viewing screen during photo capture. \
+Viewing screen during photo-lines capture. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255084-4f3f184d-909e-43ee-a22a-f3557d881f4b.png">
 
 Folder view of captured photos. \
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255097-636f1a1c-c017-41ea-b69d-989501a2c469.png">
 <img height="300" src="https://user-images.githubusercontent.com/1282659/131255104-74f2822e-6be3-4bd2-a660-05d2212a8708.png">
 
-Example photo of my family. \
+Example stitched photo of my family. \
 <img height="400" src="https://user-images.githubusercontent.com/1282659/131255107-3fb3a81c-d811-4d0d-8c7f-48882753ca10.png">
 
